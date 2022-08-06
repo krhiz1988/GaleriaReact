@@ -1,7 +1,14 @@
 import logo from './logo.svg';
 import './App.css';
 import Header from './components/Header';
-import Card from './components/Card';
+import Footer from './components/Footer';
+import Container from 'react-bootstrap/Container';
+import Row from 'react-bootstrap/Row';
+import Col from 'react-bootstrap/Col';
+import CardUno from './components/CardUno';
+import CardDos from './components/CardDos';
+import CardTres from './components/CardTres';
+
 
 const galeria = [
   {
@@ -24,9 +31,21 @@ function App() {
   
   return (
     <div className="App">
-      <Header title="Galería de Imágenes con React" />
-      <Card  galeria={galeria[0]} />
-
+      <Header title="Galería de Imágenes con React"   />
+      <Container>
+        <Row className="justify-content-md-center text-color">
+          <Col sm={4}>
+            <CardUno  galeria={galeria[0]} />
+          </Col>
+          <Col sm={4}>
+            <CardDos  galeria={galeria[1]} />
+          </Col>
+          <Col sm={4}>
+          <CardTres  galeria={galeria[2]} />
+          </Col>
+        </Row>
+      </Container>
+      <Footer />
     </div>
   );
 }

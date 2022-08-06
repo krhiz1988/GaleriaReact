@@ -1,6 +1,6 @@
 const Header = (props) => {
     return (
-    <h1>
+    <h1 className='margen'>
         {props.title}
     </h1>
     );
